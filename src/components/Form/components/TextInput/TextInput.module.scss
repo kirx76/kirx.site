@@ -1,0 +1,18 @@
+@import 'src/styles/fonts';
+@import 'src/styles/library';
+
+.default {
+  @extend .text;
+  background: $back;
+  border: 2px solid $input-border-color;
+  border-radius: 45px;
+  //max-width: 480px;
+  padding: 24px 43px;
+  //width: 100%;
+  flex: 1;
+  outline: none;
+
+  &::placeholder {
+    color: $gray;
+  }
+}

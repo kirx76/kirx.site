@@ -1,0 +1,54 @@
+@import 'src/styles/fonts';
+@import 'src/styles/library';
+
+.default {
+  color: $black;
+  background-color: $white;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  transition: $transition;
+  flex: 1;
+
+  &:hover {
+    background-color: $orange;
+    color: $white;
+
+    &[data-reversed='true'] {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  &[data-reversed='true'] {
+    background-color: $back;
+    border: 2px solid $white;
+    color: $white;
+  }
+}
+
+.small {
+  @extend .text;
+  @extend .default;
+  padding: 14px 66px;
+  border-radius: 27px;
+  //max-width: 280px;
+
+  &[data-reversed='true'] {
+    border: 2px solid $white;
+    padding: 12px 66px;
+  }
+}
+
+.medium {
+  @extend .h4;
+  @extend .default;
+  padding: 30px 82px;
+  border-radius: 39px;
+  //max-width: 380px;
+
+  &[data-reversed='true'] {
+    border: 2px solid $white;
+    padding: 28px 82px;
+  }
+}
